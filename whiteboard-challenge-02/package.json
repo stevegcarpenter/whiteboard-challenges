@@ -1,0 +1,25 @@
+{
+  "name": "whiteboard-challenge-02",
+  "version": "1.0.0",
+  "description": "Find the max and next max in an array of numbers",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --verbose"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stevegcarpenter/whiteboard-challenges.git"
+  },
+  "keywords": [
+    "https://github.com/stevegcarpenter/whiteboard-challenges"
+  ],
+  "author": "Steven Carpenter",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/stevegcarpenter/whiteboard-challenges/issues"
+  },
+  "homepage": "https://github.com/stevegcarpenter/whiteboard-challenges#readme",
+  "dependencies": {
+    "jest": "^22.1.1"
+  }
+}
