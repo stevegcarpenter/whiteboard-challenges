@@ -4,12 +4,14 @@ const solution = module.exports = {};
 
 solution.findMiddleNode = (head) => {
   if (!head) return null;
-  if (typeof head !== 'object') return null;
   var itr, itr2;
 
   // validate that the list contents all contain only two properties
   // and that those properties are 'value' and 'next'
   for (itr = head; itr; itr = itr.next) {
+    // If it's not an object something is wrong
+    if (typeof itr !== 'object') return null;
+
     let keys = Object.keys(itr);
     // return null if invalid number of keys exists in the node
     if (keys.length !== 2) return null;
