@@ -7,18 +7,16 @@ describe('Solution Modules', () => {
     // valid data case
     it('should return back an array of the intersections', () => {
       let result;
-      result = solution.findIntersections([1, 2, 3], [1]);
-      expect(result).toEqual([1]);
-      result = solution.findIntersections([45, 27, -14], [1, 2, 3, 4, 5, 6, 7, -14]);
-      expect(result).toEqual([-14]);
+      result = solution.findIntersections(['sue', 'sally', 'joe'], ['sue']);
+      expect(result).toEqual(['sue']);
     });
 
     // failure cases
     it('should return an empty array if either (or both) of the arrays are empty', () => {
       let result;
-      result = solution.findIntersections([], [1, 2]);
+      result = solution.findIntersections([], ['bob', 'rima']);
       expect(result).toEqual([]);
-      result = solution.findIntersections([1, 2], []);
+      result = solution.findIntersections(['bob', 'rima'], []);
       expect(result).toEqual([]);
       result = solution.findIntersections([], []);
       expect(result).toEqual([]);
@@ -26,12 +24,18 @@ describe('Solution Modules', () => {
 
     it('should return an empty array if either (or both) of the passed arguments are not arrays themselves', () => {
       let result;
-      result = solution.findIntersections(null, [1, 2, 3]);
+      result = solution.findIntersections(null, ['bob', 'rima']);
       expect(result).toEqual([]);
-      result = solution.findIntersections([1, 2, 3], null);
+      result = solution.findIntersections(['bob', 'rima'], null);
       expect(result).toEqual([]);
       result = solution.findIntersections(null, undefined);
       expect(result).toEqual([]);
+    });
+
+    it('should return null if any non strings are present in either array argument', () => {
+      let result;
+      result = solution.findIntersections(['1'], [1]);
+      expect(result).toEqual(null);
     });
   });
 });
