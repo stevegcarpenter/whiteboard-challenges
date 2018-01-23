@@ -4,7 +4,8 @@
   "description": "Find if their is a circle in a linked list",
   "main": "index.js",
   "scripts": {
-    "test": "jest --verbose"
+    "test": "jest --verbose",
+    "lint": "eslint ."
   },
   "repository": {
     "type": "git",
