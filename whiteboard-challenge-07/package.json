@@ -1,0 +1,24 @@
+{
+  "name": "whiteboard-challenge-07",
+  "version": "1.0.0",
+  "description": "Find if their is a circle in a linked list",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --verbose",
+    "lint": "eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stevegcarpenter/whiteboard-challenges.git"
+  },
+  "author": "Steve Carpenter",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/stevegcarpenter/whiteboard-challenges/issues"
+  },
+  "homepage": "https://github.com/stevegcarpenter/whiteboard-challenges#readme",
+  "dependencies": {
+    "eslint": "^4.16.0",
+    "jest": "^22.1.4"
+  }
+}
