@@ -31,7 +31,7 @@ describe('Solution Module', () => {
       expect(listIntersection(lista, listb)).toBe(null);
     });
 
-    it('should return null if there are no interections in the list', () => {
+    it('should return a new list when there are intersections', () => {
       // write tests here
       let lista = new Node(3);
       let n = new Node(2);
@@ -50,7 +50,7 @@ describe('Solution Module', () => {
       listb = n;
 
       let intersection = listIntersection(lista, listb);
-      expect(intersection.value).toBe(4);
+      expect(intersection.value).toBe(3);
     });
   });
 });
