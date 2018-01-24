@@ -41,11 +41,11 @@ describe('Solution Module', () => {
       n.next = lista;
       lista = n;
 
-      let listb = new Node(3);
+      let listb = new Node(7);
       n = new Node(9);
       n.next = listb;
       listb = n;
-      n = new Node(8);
+      n = new Node(3);
       n.next = listb;
       listb = n;
 
