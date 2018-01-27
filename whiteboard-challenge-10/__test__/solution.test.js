@@ -46,5 +46,9 @@ describe('Solution Module', () => {
     it('should throw an error if `n` is not of type number', () => {
       expect(() => solution.binarySearch([1, 2, 3, 4], 'foo')).toThrow('Ooops');
     });
+
+    it('should return null if the `n` value is not found', () => {
+      expect(solution.binarySearch([1, 3, 5], 4)).toEqual(null);
+    });
   });
 });
