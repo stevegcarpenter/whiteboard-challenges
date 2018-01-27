@@ -19,3 +19,16 @@ solution.checkBraces = (squigleys) => {
   // a perfect match of braces
   return true;
 };
+
+solution.binarySearch = (sortedArr, n) => {
+  if (!(sortedArr instanceof Array)) throw new Error('Ooops');
+  if (typeof n !== 'number') throw new Error('Ooops');
+  let l = 0, r = sortedArr.length - 1;
+  while (l <= r) {
+    let mid = l + Math.floor((r - l) / 2);
+    if (n < sortedArr[mid]) r = mid - 1;
+    else if (n > sortedArr[mid]) l = mid + 1;
+    else return {value: n, index: mid};
+  }
+  return null;
+};
