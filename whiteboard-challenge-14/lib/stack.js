@@ -13,14 +13,14 @@ module.exports = class {
     this.top = null;
   }
 
-  push(val) {
+  push(value) {
     // BigO(1) to insert an item
-    if (!val && val !== 0)
+    if (!value && value !== 0)
       throw new Error('Error: Value must be valid');
     if (this.size === this.max)
       throw new Error('Error: Stack is at max size');
 
-    let node = new Node(val);
+    let node = new Node(value);
     node.next = this.top;
     this.top = node;
     this.size++;
@@ -34,13 +34,13 @@ module.exports = class {
     this.top = node.next;
     node.next = null;
     this.size--;
-    return node.val;
+    return node.value;
   }
 
   peek() {
     // BigO(1) to peek at the top of the stack
     if (!this.size)
       throw new Error('Error: Stack is empty');
-    return this.top.val;
+    return this.top.value;
   }
 };
