@@ -16,6 +16,9 @@ module.exports = class {
   }
 
   breadthFirst(callback) {
+    if (!callback) throw new Error('Error: callback not defined');
+    if (typeof callback !== 'function')
+      throw new Error('Error: callback is not a function');
     if (!this.root) return;
 
     let q = new Queue();
@@ -50,7 +53,7 @@ module.exports = class {
 
   removeByVal(value) {
     if (!value && value !== 0) throw new Error('Error: value is falsey and non-zero');
-    if (!this.root) return this;
+    if (!this.root) return null;
 
     if (this.root.value === value) {
       console.log('Snipping root');
