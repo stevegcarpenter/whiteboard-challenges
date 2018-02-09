@@ -24,8 +24,6 @@ class SLL {
     if (typeof value !== 'number')
       throw Error('Error: only numbers supported for insertAscending');
 
-    console.log('inserting:' + value);
-
     let node = new Node(value);
 
     if (!this.head || this.head.value >= value) {
