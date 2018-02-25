@@ -10,18 +10,20 @@ module.exports = (wordsArr) => {
     if (typeof word !== 'string')
       throw new TypeError(`${word} is not a string`);
 
-    let key = word.trim().toLower().split('').sort().join();
+    let key = word.trim().toLowerCase().split('').sort().join('');
 
     // Store anagrams in an array
     if (!anagrams[key])
       anagrams[key] = [];
 
-    anagrams[key].push(word.trim().toLower());
+    anagrams[key].push(word.trim().toLowerCase());
   });
 
   // Sort the keys and add all the anagrams back into the results array
   let results = [];
-  Object.keys(anagrams).sort().map(key => results.concat(...anagrams[key]));
+  Object.keys(anagrams).sort().map(key => {
+    results = results.concat(...anagrams[key].sort());
+  });
 
   return results;
 };
